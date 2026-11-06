@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore genomics, DNA sequencing, bioinformatics and interactive virtual experiments.">
+  <meta name="theme-color" content="#070b12">
+  <title>GENOMICS — Beyond DNA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">G</span><span>GENOMICS<small>THE LANGUAGE OF LIFE</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#explore">Explore</a><a href="#dna">DNA & RNA</a>
+      <a href="#sequencing">Sequencing</a><a href="#lab">Virtual Lab</a><a href="#library">Research Library</a>
+    </nav>
+    <a class="nav-cta" href="https://genome-ai-frontend.onrender.com/" target="_blank" rel="noopener">Explore GenomeAI ↗</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> AN INTERACTIVE JOURNEY INTO GENOMICS</div>
+        <h1>BEYOND DNA.<br><span>DISCOVER THE</span><br><em>LANGUAGE OF LIFE.</em></h1>
+        <p class="hero-lead">Explore the molecular architecture of life — from the structure of DNA to the technologies that let scientists read, analyse and understand genomes.</p>
+        <div class="hero-actions"><a class="button primary" href="#explore">Start exploring <span>→</span></a><a class="button secondary" href="#lab">Enter virtual lab <span>↗</span></a></div>
+        <div class="hero-stats"><div><strong>4</strong><span>DNA bases</span></div><div><strong>3.2B</strong><span>Human haploid genome bases*</span></div><div><strong>∞</strong><span>Questions to explore</span></div></div>
+        <small class="footnote">*Approximate number of base pairs in one haploid human nuclear genome.</small>
+      </div>
+      <div class="helix-panel" aria-label="Decorative animated DNA double helix">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="helix-title">MOLECULAR BLUEPRINT <span>01 / 04</span></div>
+        <div class="helix" id="helix"></div>
+        <div class="base-label label-a">A</div><div class="base-label label-t">T</div><div class="base-label label-g">G</div><div class="base-label label-c">C</div>
+        <div class="helix-caption"><span class="status-dot"></span> DNA STRUCTURE // VISUAL MODEL</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Genomics topics"><div>DNA STRUCTURE <b>✳</b> SEQUENCING <b>✳</b> BIOINFORMATICS <b>✳</b> GENOME ASSEMBLY <b>✳</b> GENETIC VARIATION <b>✳</b> DNA STRUCTURE <b>✳</b> SEQUENCING <b>✳</b></div></section>
+
+    <section class="section intro" id="explore">
+      <div class="section-heading"><div><div class="eyebrow">01 — THE BIG PICTURE</div><h2>Life has a <span>language.</span><br>Let's learn to read it.</h2></div><p>Genomics studies the complete set of DNA in an organism — how it is organised, how it works, and how it changes.</p></div>
+      <div class="journey">
+        <article class="journey-card"><span>01</span><div class="journey-icon">◉</div><h3>Cell</h3><p>The basic structural and functional unit of life.</p></article>
+        <div class="journey-arrow">→</div>
+        <article class="journey-card"><span>02</span><div class="journey-icon">◎</div><h3>Nucleus</h3><p>In many cells, the nucleus stores most of the DNA.</p></article>
+        <div class="journey-arrow">→</div>
+        <article class="journey-card"><span>03</span><div class="journey-icon">▤</div><h3>Chromosome</h3><p>Long DNA molecules packaged with proteins.</p></article>
+        <div class="journey-arrow">→</div>
+        <article class="journey-card"><span>04</span><div class="journey-icon dna-icon">⟡</div><h3>DNA</h3><p>A molecule carrying hereditary information.</p></article>
+      </div>
+      <div class="topic-grid">
+        <a class="topic-card" href="#dna"><span class="card-number">01 / FOUNDATIONS</span><div class="topic-symbol">⌬</div><h3>DNA & RNA</h3><p>Explore nucleotides, base pairing, genes and chromosomes.</p><span class="card-link">Explore topic ↗</span></a>
+        <a class="topic-card" href="#processes"><span class="card-number">02 / MOLECULAR BIOLOGY</span><div class="topic-symbol">⟳</div><h3>Life's processes</h3><p>Understand replication, transcription and translation.</p><span class="card-link">Explore topic ↗</span></a>
+        <a class="topic-card" href="#sequencing"><span class="card-number">03 / TECHNOLOGY</span><div class="topic-symbol">⌁</div><h3>DNA sequencing</h3><p>Discover how scientists determine the order of DNA bases.</p><span class="card-link">Explore topic ↗</span></a>
+        <a class="topic-card" href="#assembly"><span class="card-number">04 / COMPUTATION</span><div class="topic-symbol">▦</div><h3>Genome analysis</h3><p>Learn reads, alignment, assembly and annotation.</p><span class="card-link">Explore topic ↗</span></a>
+        <a class="topic-card" href="#modern"><span class="card-number">05 / APPLICATIONS</span><div class="topic-symbol">✳</div><h3>Genomics today</h3><p>See how genomics supports medicine, agriculture and research.</p><span class="card-link">Explore topic ↗</span></a>
+        <a class="topic-card featured-card" href="#lab"><span class="card-number">06 / EXPERIMENT</span><div class="topic-symbol">⌘</div><h3>Virtual laboratory</h3><p>Experiment with DNA sequences using interactive simulations.</p><span class="card-link">Enter the lab ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section split-section" id="dna">
+      <div class="split-visual molecule-visual"><div class="molecule-ring"></div><div class="molecule-core">DNA</div><span class="atom atom-one">A</span><span class="atom atom-two">T</span><span class="atom atom-three">G</span><span class="atom atom-four">C</span></div>
+      <div class="split-copy"><div class="eyebrow">02 — MOLECULAR FOUNDATIONS</div><h2>Four letters.<br><span>One remarkable code.</span></h2><p>DNA is built from four kinds of nucleotide. Their nitrogenous bases are adenine (A), thymine (T), guanine (G) and cytosine (C).</p><div class="base-pairs"><div><b>A</b><span>pairs with</span><b>T</b></div><div><b>G</b><span>pairs with</span><b>C</b></div></div><p class="muted">RNA uses uracil (U) instead of thymine (T). In RNA, A commonly pairs with U.</p></div>
+    </section>
+
+    <section class="section process-section" id="processes">
+      <div class="section-heading"><div><div class="eyebrow">03 — FROM DNA TO FUNCTION</div><h2>The central flow<br>of <span>molecular biology.</span></h2></div><p>Cells use genetic information through a series of linked molecular processes.</p></div>
+      <div class="flow">
+        <article><span class="flow-num">01</span><div class="flow-icon">▤</div><h3>Replication</h3><p>DNA is copied to pass genetic information to new cells.</p></article><div class="flow-arrow">→</div>
+        <article><span class="flow-num">02</span><div class="flow-icon">≋</div><h3>Transcription</h3><p>A DNA sequence is used to produce an RNA molecule.</p></article><div class="flow-arrow">→</div>
+        <article><span class="flow-num">03</span><div class="flow-icon">◈</div><h3>Translation</h3><p>Ribosomes read mRNA to build a chain of amino acids.</p></article>
+      </div>
+    </section>
+
+    <section class="section sequencing-section" id="sequencing">
+      <div class="section-heading"><div><div class="eyebrow">04 — READING THE CODE</div><h2>How do we <span>read a genome?</span></h2></div><p>DNA sequencing determines the order of nucleotide bases in a DNA molecule.</p></div>
+      <div class="sequence-grid">
+        <article class="sequence-card"><div class="sequence-tag">CLASSICAL METHOD</div><h3>Sanger sequencing</h3><p>Uses chain-terminating ddNTPs to generate DNA fragments of different lengths, which can be used to infer a sequence.</p><div class="mini-sequence">A T G C <i>A</i> G T C</div></article>
+        <article class="sequence-card"><div class="sequence-tag">HIGH-THROUGHPUT</div><h3>Next-generation sequencing</h3><p>Sequences many DNA fragments in parallel, producing large collections of reads.</p><div class="read-bars"><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="sequence-card"><div class="sequence-tag">SEQUENCING STRATEGY</div><h3>Shotgun sequencing</h3><p>Breaks DNA into smaller fragments, sequences them, then uses computational methods to reconstruct longer sequences.</p><div class="shotgun-visual"><span></span><span></span><span></span><span></span></div></article>
+      </div>
+    </section>
+
+    <section class="section assembly-section" id="assembly">
+      <div class="assembly-copy"><div class="eyebrow">05 — COMPUTATIONAL GENOMICS</div><h2>From fragments<br>to a <span>bigger picture.</span></h2><p>Genome assembly uses overlaps between sequencing reads to reconstruct longer stretches of DNA. Try matching the short reads in the Virtual Lab below.</p><a class="text-link" href="#lab">Try the assembly simulator ↗</a></div>
+      <div class="assembly-diagram"><div class="assembly-row"><label>READS</label><div class="fragments"><span>ATGCA</span><span>GCA TT</span><span>ATTGC</span></div></div><div class="down-arrow">↓ OVERLAP</div><div class="assembly-row"><label>CONTIG</label><div class="contig">ATGCATTGC</div></div><div class="down-arrow">↓ MORE INFORMATION</div><div class="assembly-row"><label>SCAFFOLD</label><div class="scaffold">CONTIG <i>— GAP —</i> CONTIG</div></div><small>Conceptual illustration — not real sequencing data.</small></div>
+    </section>
+
+    <section class="section lab-section" id="lab">
+      <div class="section-heading"><div><div class="eyebrow">06 — INTERACTIVE LEARNING</div><h2>Welcome to the <span>virtual lab.</span></h2></div><p>Explore simple simulations using fictional teaching sequences. Change the inputs and observe what happens.</p></div>
+      <div class="lab-tabs" role="tablist"><button class="lab-tab active" data-tab="pairing" role="tab" aria-selected="true">01 · Base pairing</button><button class="lab-tab" data-tab="mutation" role="tab" aria-selected="false">02 · Mutation explorer</button><button class="lab-tab" data-tab="assemblyLab" role="tab" aria-selected="false">03 · Read assembly</button></div>
+      <div class="lab-panel active" id="pairing" role="tabpanel">
+        <div class="lab-info"><span class="lab-kicker">EXPERIMENT 01</span><h3>Build a complementary strand</h3><p>Enter a short DNA sequence using A, T, G and C. The simulator will create its complementary strand using base-pairing rules.</p><label for="dnaInput">YOUR DNA SEQUENCE</label><input id="dnaInput" value="ATGCCGTA" maxlength="24" autocomplete="off"><button class="button primary" id="pairButton">Generate strand →</button><p class="lab-note" id="pairNote" aria-live="polite">A pairs with T. G pairs with C.</p></div>
+        <div class="lab-result"><div class="result-label">ORIGINAL STRAND · 5′ → 3′</div><div class="sequence-output" id="originalStrand">A T G C C G T A</div><div class="pair-lines">│ │ │ │ │ │ │ │</div><div class="sequence-output complement" id="complementStrand">T A C G G C A T</div><div class="result-label">COMPLEMENTARY · 3′ → 5′</div></div>
+      </div>
+      <div class="lab-panel" id="mutation" role="tabpanel">
+        <div class="lab-info"><span class="lab-kicker">EXPERIMENT 02</span><h3>Explore a sequence change</h3><p>Choose a type of change and compare the original teaching sequence with the modified sequence.</p><label for="mutationType">MUTATION TYPE</label><select id="mutationType"><option value="substitution">Substitution</option><option value="insertion">Insertion</option><option value="deletion">Deletion</option></select><button class="button primary" id="mutationButton">Apply example →</button><p class="lab-note" id="mutationNote" aria-live="polite">This is a fictional sequence for learning.</p></div>
+        <div class="lab-result"><div class="result-label">ORIGINAL</div><div class="sequence-output" id="mutationOriginal">ATGCCGTA</div><div class="result-label">MODIFIED</div><div class="sequence-output complement" id="mutationChanged">ATGCCGTA</div><p class="muted">A sequence change does not always alter a protein or cause an observable effect.</p></div>
+      </div>
+      <div class="lab-panel" id="assemblyLab" role="tabpanel">
+        <div class="lab-info"><span class="lab-kicker">EXPERIMENT 03</span><h3>Find the overlapping reads</h3><p>Arrange the short reads in the correct order to reconstruct the teaching sequence.</p><button class="button primary" id="assemblyButton">Show one possible assembly →</button><p class="lab-note" id="assemblyNote" aria-live="polite">Reads can overlap by sharing the same bases at their ends and beginnings.</p></div>
+        <div class="lab-result"><div class="result-label">SHORT READS</div><div class="read-pills"><span>ATGC</span><span>GCAT</span><span>ATTA</span><span>TTAC</span></div><div class="result-label">ONE POSSIBLE RECONSTRUCTION</div><div class="sequence-output complement" id="assemblyOutput">? ? ? ? ? ? ? ? ? ?</div><p class="muted">Simplified educational example. Real genome assembly uses many reads and computational algorithms.</p></div>
+      </div>
+      <div class="simulation-warning">⚠ EDUCATIONAL SIMULATIONS — These activities use fictional sequences and do not analyse personal DNA or represent laboratory results.</div>
+    </section>
+
+    <section class="section modern-section" id="modern">
+      <div class="section-heading"><div><div class="eyebrow">07 — GENOMICS IN THE WORLD</div><h2>One field.<br><span>Many frontiers.</span></h2></div><p>Genomics connects biology with computing, medicine, agriculture, evolution and many other fields.</p></div>
+      <div class="frontier-grid"><div><b>01</b><h3>Medical genomics</h3><p>Studies how genetic variation relates to health and disease.</p></div><div><b>02</b><h3>Agricultural genomics</h3><p>Helps researchers study crop traits and organism diversity.</p></div><div><b>03</b><h3>Evolutionary genomics</h3><p>Compares genomes to investigate ancestry and evolution.</p></div><div><b>04</b><h3>AI & bioinformatics</h3><p>Uses computational methods to find patterns in biological data.</p></div></div>
+    </section>
+
+    <section class="section library-section" id="library">
+      <div class="section-heading"><div><div class="eyebrow">08 — KEEP EXPLORING</div><h2>Research begins<br>with <span>good sources.</span></h2></div><p>Start with trusted scientific organisations and databases. These links open external resources.</p></div>
+      <div class="resource-grid">
+        <a href="https://www.genome.gov/" target="_blank" rel="noopener"><span>NHGRI</span><h3>National Human Genome Research Institute</h3><p>Accessible explanations of genomics and the Human Genome Project.</p><b>Visit resource ↗</b></a>
+        <a href="https://www.ncbi.nlm.nih.gov/" target="_blank" rel="noopener"><span>NCBI</span><h3>National Center for Biotechnology Information</h3><p>Biological databases, sequence records and research tools.</p><b>Visit resource ↗</b></a>
+        <a href="https://www.ebi.ac.uk/" target="_blank" rel="noopener"><span>EMBL-EBI</span><h3>European Bioinformatics Institute</h3><p>Open biological data resources and bioinformatics training.</p><b>Visit resource ↗</b></a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener"><span>PUBMED</span><h3>Biomedical literature database</h3><p>Search for scientific articles and biomedical research.</p><b>Visit resource ↗</b></a>
+      </div>
+    </section>
+
+    <section class="bridge-section"><div class="bridge-orb">G<span>AI</span></div><div><div class="eyebrow">FROM BIOLOGY TO BIOINFORMATICS</div><h2>Understand the science.<br><span>Explore the data.</span></h2><p>Continue your journey with GenomeAI, our companion educational platform for computational genomics and AI-assisted exploration.</p><a class="button primary" href="https://genome-ai-frontend.onrender.com/" target="_blank" rel="noopener">Explore GenomeAI ↗</a></div></section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">G</span><span>GENOMICS<small>THE LANGUAGE OF LIFE</small></span></a><p>Built for curious minds. Learn, explore and question.</p><span>© 2026 GENOMICS · Educational project</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
