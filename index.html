@@ -15,7 +15,7 @@
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav id="mainNav">
       <a href="#home">Home</a><a href="#explore">Explore</a><a href="#dna">DNA & RNA</a>
-      <a href="#sequencing">Sequencing</a><a href="#lab">Virtual Lab</a><a href="#library">Research Library</a>
+      <a href="#sequencing">Sequencing</a><a href="#terminology-game">Play & Learn</a><a href="#lab">Virtual Lab</a><a href="#library">Research Library</a>
     </nav>
     <a class="nav-cta" href="https://genome-ai-frontend.onrender.com/" target="_blank" rel="noopener">Explore GenomeAI ↗</a>
   </header>
@@ -62,6 +62,40 @@
       </div>
     </section>
 
+
+    <section class="section terminology-game" id="terminology-game">
+      <div class="section-heading">
+        <div><div class="eyebrow">06 — LEARN BY PLAYING</div><h2>Don't just memorise.<br><span>Master the language.</span></h2></div>
+        <p>Turn genomics terminology into a game. Learn a concept, choose its meaning, collect points and unlock the next challenge.</p>
+      </div>
+      <div class="game-shell">
+        <div class="game-topline"><span class="game-badge">GENOMICS QUEST / LEVEL 01</span><span class="game-score">SCORE <b id="termScore">0</b> XP</span></div>
+        <div class="game-progress"><span id="termProgress"></span></div>
+        <div class="game-layout">
+          <div class="game-question">
+            <div class="game-label">YOUR MISSION</div>
+            <div class="term-orb" id="termOrb">DNA</div>
+            <h3 id="termQuestion">What does DNA mean?</h3>
+            <p id="termHint">Hint: It is the molecule that stores hereditary information in living organisms.</p>
+            <div class="game-feedback" id="termFeedback" aria-live="polite">Choose the best answer to earn 10 XP.</div>
+          </div>
+          <div class="game-answers" id="termAnswers">
+            <button class="answer-choice" type="button" data-answer="wrong">A type of protein that carries oxygen</button>
+            <button class="answer-choice" type="button" data-answer="correct">Deoxyribonucleic acid</button>
+            <button class="answer-choice" type="button" data-answer="wrong">A cell structure that makes energy</button>
+            <button class="answer-choice" type="button" data-answer="wrong">A method used to photograph chromosomes</button>
+          </div>
+        </div>
+        <div class="game-footer"><span id="termRound">QUESTION 1 / 8</span><button class="button primary" id="nextTerm" type="button" disabled>Next challenge →</button></div>
+      </div>
+      <div class="mini-games">
+        <article><span class="mini-game-icon">⌬</span><div class="eyebrow">GAME 02</div><h3>Base-Pair Blitz</h3><p>Test your speed: pair A with T and G with C. Then explore why the pairs matter.</p><a href="#lab" class="text-link">Play in the Virtual Lab ↗</a></article>
+        <article><span class="mini-game-icon">▦</span><div class="eyebrow">GAME 03</div><h3>Assemble the Genome</h3><p>Use overlapping short reads to build a longer DNA sequence, one fragment at a time.</p><a href="#assemblyLab" class="text-link" data-open-tab="assemblyLab">Try the assembly challenge ↗</a></article>
+        <article><span class="mini-game-icon">⟳</span><div class="eyebrow">GAME 04</div><h3>Mutation Detective</h3><p>Spot substitutions, insertions and deletions in a fictional DNA sequence.</p><a href="#mutation" class="text-link" data-open-tab="mutation">Investigate a mutation ↗</a></article>
+      </div>
+      <div class="game-disclaimer">LEARNING BY PLAYING · Game questions are educational. The sequences and examples are fictional teaching material.</div>
+    </section>
+
     <section class="section split-section" id="dna">
       <div class="split-visual molecule-visual"><div class="molecule-ring"></div><div class="molecule-core">DNA</div><span class="atom atom-one">A</span><span class="atom atom-two">T</span><span class="atom atom-three">G</span><span class="atom atom-four">C</span></div>
       <div class="split-copy"><div class="eyebrow">02 — MOLECULAR FOUNDATIONS</div><h2>Four letters.<br><span>One remarkable code.</span></h2><p>DNA is built from four kinds of nucleotide. Their nitrogenous bases are adenine (A), thymine (T), guanine (G) and cytosine (C).</p><div class="base-pairs"><div><b>A</b><span>pairs with</span><b>T</b></div><div><b>G</b><span>pairs with</span><b>C</b></div></div><p class="muted">RNA uses uracil (U) instead of thymine (T). In RNA, A commonly pairs with U.</p></div>
@@ -91,7 +125,7 @@
     </section>
 
     <section class="section lab-section" id="lab">
-      <div class="section-heading"><div><div class="eyebrow">06 — INTERACTIVE LEARNING</div><h2>Welcome to the <span>virtual lab.</span></h2></div><p>Explore simple simulations using fictional teaching sequences. Change the inputs and observe what happens.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">07 — INTERACTIVE LAB</div><h2>Welcome to the <span>virtual lab.</span></h2></div><p>Explore simple simulations using fictional teaching sequences. Change the inputs and observe what happens.</p></div>
       <div class="lab-tabs" role="tablist"><button class="lab-tab active" data-tab="pairing" role="tab" aria-selected="true">01 · Base pairing</button><button class="lab-tab" data-tab="mutation" role="tab" aria-selected="false">02 · Mutation explorer</button><button class="lab-tab" data-tab="assemblyLab" role="tab" aria-selected="false">03 · Read assembly</button></div>
       <div class="lab-panel active" id="pairing" role="tabpanel">
         <div class="lab-info"><span class="lab-kicker">EXPERIMENT 01</span><h3>Build a complementary strand</h3><p>Enter a short DNA sequence using A, T, G and C. The simulator will create its complementary strand using base-pairing rules.</p><label for="dnaInput">YOUR DNA SEQUENCE</label><input id="dnaInput" value="ATGCCGTA" maxlength="24" autocomplete="off"><button class="button primary" id="pairButton">Generate strand →</button><p class="lab-note" id="pairNote" aria-live="polite">A pairs with T. G pairs with C.</p></div>
@@ -109,12 +143,12 @@
     </section>
 
     <section class="section modern-section" id="modern">
-      <div class="section-heading"><div><div class="eyebrow">07 — GENOMICS IN THE WORLD</div><h2>One field.<br><span>Many frontiers.</span></h2></div><p>Genomics connects biology with computing, medicine, agriculture, evolution and many other fields.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">08 — GENOMICS IN THE WORLD</div><h2>One field.<br><span>Many frontiers.</span></h2></div><p>Genomics connects biology with computing, medicine, agriculture, evolution and many other fields.</p></div>
       <div class="frontier-grid"><div><b>01</b><h3>Medical genomics</h3><p>Studies how genetic variation relates to health and disease.</p></div><div><b>02</b><h3>Agricultural genomics</h3><p>Helps researchers study crop traits and organism diversity.</p></div><div><b>03</b><h3>Evolutionary genomics</h3><p>Compares genomes to investigate ancestry and evolution.</p></div><div><b>04</b><h3>AI & bioinformatics</h3><p>Uses computational methods to find patterns in biological data.</p></div></div>
     </section>
 
     <section class="section library-section" id="library">
-      <div class="section-heading"><div><div class="eyebrow">08 — KEEP EXPLORING</div><h2>Research begins<br>with <span>good sources.</span></h2></div><p>Start with trusted scientific organisations and databases. These links open external resources.</p></div>
+      <div class="section-heading"><div><div class="eyebrow">09 — KEEP EXPLORING</div><h2>Research begins<br>with <span>good sources.</span></h2></div><p>Start with trusted scientific organisations and databases. These links open external resources.</p></div>
       <div class="resource-grid">
         <a href="https://www.genome.gov/" target="_blank" rel="noopener"><span>NHGRI</span><h3>National Human Genome Research Institute</h3><p>Accessible explanations of genomics and the Human Genome Project.</p><b>Visit resource ↗</b></a>
         <a href="https://www.ncbi.nlm.nih.gov/" target="_blank" rel="noopener"><span>NCBI</span><h3>National Center for Biotechnology Information</h3><p>Biological databases, sequence records and research tools.</p><b>Visit resource ↗</b></a>
